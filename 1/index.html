@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>EJERCICIO 1 JSX</title>
+    </head>
+
+    <body>
+        <div id="root">
+        </div>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/babel">
+        
+        const data = {
+            title_1: "Plato de la semana",
+            title_2: "Berenjenas fritas",
+            paragraph_1: "Comensales: 4 personas",
+            paragraph_2: "Tiempo de preparacion: 10 minutos",
+            paragraph_3: "Tiempo de coccion: 12 minutos",
+            paragraph_4: "Ingredientes:",
+            paragraph_5: "4 berenjenas.",
+            paragraph_6: "Sal.",
+            paragraph_7: "Pimienta.",
+            paragraph_8: "4 cucharadas de harina y aceite.",
+            paragraph_9: "Preparacion:",
+            paragraph_10: "Lavar las berenjenas.",
+            paragraph_11: "Cortarlas en rodajas.",
+            paragraph_12: "Espolvorearlas con sal.",
+            paragraph_13: "Dejar que suelten el agua durante 30 minutos.",
+            paragraph_14: "Enharizarlas, ponerlas a freir durante 5 minutos en aceite bien caliente."
+        }
+
+    
+        const title_x = <h1>{data.title_1}</h1>;
+        const subtitle_x = <h2>{data.title_2}</h2>;
+        const paragraph_x = <p>{data.paragraph_1}</p>;
+        const paragraph_2x = <p>{data.paragraph_2}</p>;
+        const paragraph_3x = <p>{data.paragraph_3}</p>;
+        const paragraph_4x = <p>{data.paragraph_4}</p>;
+        const paragraph_5x = <p>{data.paragraph_5}<br></br>{data.paragraph_6}<br></br>{data.paragraph_7}<br></br>{data.paragraph_8}</p>;
+        const paragraph_9x = <p>{data.paragraph_9}</p>
+        const paragraph_10x = <p>{data.paragraph_10}<br></br>{data.paragraph_11}<br></br>{data.paragraph_12}<br></br>{data.paragraph_13}<br></br>{data.paragraph_14}</p>
+
+        const element = (
+            <div>
+                {title_x}
+                {subtitle_x}
+                {paragraph_x}
+                {paragraph_2x}
+                {paragraph_3x}
+                {paragraph_4x}
+                {paragraph_5x}
+                {paragraph_9x}
+                {paragraph_10x}
+            </div>
+        );
+
+        ReactDOM.render(
+        element,
+        document.getElementById('root')
+        );
+        </script>
+    </body>
+</html>

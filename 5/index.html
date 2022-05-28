@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, user-scalable=no'>
+    <title>Pagina inicial de Juan Tuesta</title>
+    <!--Etiquetas meta-->
+    <meta name='author' content='Nicolas'>
+    <meta name='keywords' content='html, pagina, universidad'>
+    <meta name='description' content='Pagina personal de Juan Tuesta, de 
+    la universidad de Deusto'>
+  </head>
+  <body>
+    <!-- JSX -->
+    <div id="root"></div>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/babel">
+        
+        const data = {
+            title_1: "Página inicial de Juan Tuesta",
+            paragraph_1: "Bienvenido a mi pagina personal. Soy un alumno de la Universidad de Deusto y esta es mi pagina inicial, con la lista de mis enlaces favoritos y otra informacion de interes.",
+            subtitle_1: "Enlaces favoritos:",
+            list_1: "Paginas personales",
+            list_2: "Paginas de referencia",
+            list_3: "Portales",
+            list_4: "Publicaciones",
+            footer: "Juan Tuesta, Universidad de Deusto, marzo 2000."
+        }
+
+        // Object paginas personales
+        const data2 = {
+            subtitle_2: "Páginas personales",
+            list_1: "Documentalistas",
+            list_1_sub1: "Charkes F. Golfarb",
+            list_1_sub2: "Lou Burnard",
+            list_1_sub3: "Tim Berners-Lee",
+            list_2: "Historiadores",
+            list_3: "Linguistas",
+            list_4: "Traductores"
+        }
+
+        // Object paginas de referencia
+        const data3 = {
+            subtitle_3: "Páginas de referencia",
+            listPagRef_1: "Bibliotecas universitarias",
+            listPagRef_2: "Centros de documentacion",
+            listPagRef_3: "Museos de arte contemporaneo",
+            listPagRef_4: "Medios de comunicacion" 
+        }
+
+        // Object portales
+        const data4 = {
+            subtitle_4: "Portales",
+            listPor_1: "Inicia",
+            listPor_2: "Telepolis",
+            listPor_3: "Ciudades",
+            listPor_4: "Terra"
+        }
+
+        // Object publicaciones
+        const data5 = {
+            subtitle_5: "Publicaciones",
+            lisPub_1: "Ciberp@ís",
+            lisPub_2: "Diario Tecnologias de la Informacion",
+            lisPub_3: "The Standard",
+            lisPub_4: "Infoworld",
+            lisPub_5: "Wired",
+        }
+
+        // data from Header & Enlaces Favoritos
+        const title_x = <h1>{data.title_1}</h1>;
+        const paragraph_1 = <p>{data.paragraph_1}</p>;
+        const subtitle_1 = <h2>{data.subtitle_1}</h2>;
+        const listElements = <ol><li><a href="#subt2">{data.list_1}</a></li><li>{data.list_2}</li><li>{data.list_3}</li><li>{data.list_4}</li></ol>
+        const footer = <i>{data.footer}</i>
+
+        // data Paginas personales
+        const subtitle_2 = <h2 id="subt2">{data2.subtitle_2}</h2>;
+        const list_1 = <ol><li>{data2.list_1}</li><ul><li>{data2.list_1_sub1}</li><li>{data2.list_1_sub2}</li><li>{data2.list_1_sub3}</li></ul><li>{data2.list_2}</li><li>{data2.list_3}</li><li>{data2.list_4}</li></ol>;
+
+        // data paginas de referencia
+        const subtitle_3 = <h2>{data3.subtitle_3}</h2>;
+        const listPagRef = <ol><li>{data3.listPagRef_1}</li><li>{data3.listPagRef_2}</li><li>{data3.listPagRef_3}</li><li>{data3.listPagRef_4}</li></ol>
+
+        // data portales
+        const subtitle_4 = <h2>{data4.subtitle_4}</h2>;
+        const listPor = <ol><li>{data4.listPor_1}</li><li>{data4.listPor_2}</li><li>{data4.listPor_3}</li><li>{data4.listPor_4}</li></ol>
+
+        // data publicaciones
+        const subtitle_5 = <h2>{data5.subtitle_5}</h2>;
+        const listPub = <ol><li>{data5.lisPub_1}</li><li>{data5.lisPub_2}</li><li>{data5.lisPub_3}</li><li>{data5.lisPub_4}</li><li>{data5.lisPub_5}</li></ol>
+
+
+        // element to build the website structure
+        const element = (
+            <div>
+                {title_x}
+                {paragraph_1}
+                {subtitle_1}
+                {listElements}
+                <hr></hr>
+                {subtitle_2}
+                {list_1}
+                <hr></hr>
+                {subtitle_3}
+                {listPagRef}
+                <hr></hr>
+                {subtitle_4}
+                {listPor}
+                <hr></hr>
+                {subtitle_5}
+                {listPub}
+                <hr></hr>
+                {footer}
+            </div>
+        );
+
+        ReactDOM.render(
+        element,
+        document.getElementById('root')
+        );
+        </script>
+  </body>
+</html>

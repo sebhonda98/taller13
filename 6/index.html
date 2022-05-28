@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, user-scalable=no'>
+    <title>Noticiero Next University</title>
+    <!--Etiquetas meta-->
+    <meta name='author' content='Nicolas'>
+    <meta name='keywords' content='html, pagina, universidad'>
+    <meta name='description' content='Pagina Noticiero Next University'>
+  </head>
+  <body>
+    <!-- JSX -->
+    <div id="root"></div>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/babel">
+        
+        const data = {
+            title_1: "El Noticiero Next University",
+            subtitle_1: "Programas de Tecnologia",
+            subtitle_1_1: "Desarrollador Web",
+            paragraph_1: "Next University ",
+            paragraph_2: "lanza su programa de formacion ",
+            paragraph_3: "Desarrollador Web",
+            paragraph_4: " con la finalidad de capacitar a personas en las tendencias actuales sobre tecnologias. En el caso de desarrollo web, se basa en temas relacionados a la implementacion de Front-End con tecnologias y Frameworks, tales como: ",
+            paragraph_5: "HTML5,CSS,JavaScript,Boostrap, entre otros.",
+            subtitle_1_2: "Android",
+            paragraph_6: "En ",
+            paragraph_7: "Next University",
+            paragraph_8: "te ofrecemos el programa ",
+            paragraph_9: "Android",
+            paragraph_10: " que te da las herramientas necesarias para diseñar e implementar aplicaciones Android para dispositivos moviles, partiendo de un conocimiento basico de ",
+            paragraph_11: "Java,",
+            paragraph_12: " utilizando el entorno de desarrollo ",
+            paragraph_13: "Android Studio.",
+            paragraph_14: " Aprenderás los aspectos fundamentales para crear aplicaciones Android interactivas, dinamicas y exitosas utilizando tecnicas para el manejo de los recursos, datos, segundos planos, localizacion, sensores, animaciones, graficos, multimedia y monetizacion.",
+            subtitle_2: "Programa de Negocio",
+            subtitle_2_1: "Mercadeo Digital",
+            paragraph_15: "Next University",
+            paragraph_16:" coloca a tu disposicion el programa de ",
+            paragraph_17:"Mercadeo Digital",
+            paragraph_18:". Sabias que... Mercadeo Digital o Digital Marketing es mucho mas que hacer y publicar anuncios, se trata del consumidor y la estrategia de negocio. Estos son los puntos de partida para que cualquier accion de mercadeo digital ",
+            paragraph_19:"sea exitosa y optimice la inversion. ",
+            paragraph_20:"Este certificado, es un programa completo y practico que permite entender al consumidor, la industria, la competencia y los retos del negocio propio; para crear e implementar estrategias a la medida, en diferentes plataformas y medios digitales. Por supuesto, monitoreando los resultados para tomar decisiones en tiempo real."
+        }
+
+
+        // data from Header & Enlaces Favoritos
+        const title_x = <h1>{data.title_1}</h1>;
+        const subtitle_1 = <h2>{data.subtitle_1}</h2>;
+        const subtitle_1_1 = <h3>{data.subtitle_1_1}</h3>;
+        const paragraph_1 = <p><i><strong>{data.paragraph_1}</strong></i>{data.paragraph_2}<strong>"{data.paragraph_3}"</strong>{data.paragraph_4}<i>{data.paragraph_5}</i></p>;
+        const subtitle_1_2 = <h3>{data.subtitle_1_2}</h3>
+        const paragraph_2 = <p>{data.paragraph_6}<i><strong>{data.paragraph_7}</strong></i>{data.paragraph_8}<strong>{data.paragraph_9}</strong>{data.paragraph_10}<i>{data.paragraph_11}</i>{data.paragraph_12}<i>{data.paragraph_13}</i>{data.paragraph_14}</p>
+        const subtitle_2 = <h2>{data.subtitle_2}</h2>;
+        const subtitle_2_1 = <h3>{data.subtitle_2_1}</h3>
+        const paragraph_3 = <p><i><strong>{data.paragraph_15}</strong></i>{data.paragraph_16}<strong>"{data.paragraph_17}"</strong>{data.paragraph_18}<i>{data.paragraph_19}</i>{data.paragraph_20}</p>;
+
+        // element to build the website structure
+        const element = (
+            <div>
+                {title_x}
+                {subtitle_1}
+                {subtitle_1_1}
+                {paragraph_1}
+                {subtitle_1_2}
+                {paragraph_2}
+                {subtitle_2}
+                {subtitle_2_1}
+                {paragraph_3}
+            </div>
+        );
+
+        ReactDOM.render(
+        element,
+        document.getElementById('root')
+        );
+        </script>
+  </body>
+</html>
